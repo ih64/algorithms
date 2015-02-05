@@ -1,0 +1,13 @@
+quick sort algorithm in python
+qs.txt is 10000 unsorted non-repeating integers
+qs10.txt test case of 10 integers
+qs100.txt test case of 100 integers
+qs1000.txt test case of 1000 integers
+
+Answers  are:
+size   first      last      median
+10     25         29        21
+100    615        587       518
+1000   10297      10184     8921
+10000  162085     164123    138382
+
