@@ -66,7 +66,9 @@ def median(A,l,r):
 		y=A[(r-l)/2 + l]
 
 	return np.where(A==np.median([x,y,z]))[0][0]
+	
 	#the above method usese np.median, if you feel like that's cheating use the method below
+
 #	if (x > y and x < z) or (x > z and x < y):
 #		#print(A.index(x))
 #		return np.where(A==x)[0][0]
