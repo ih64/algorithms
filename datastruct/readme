@@ -1,0 +1,13 @@
+here is valentino's explanation for 2sum.py
+i have to admit i don't understand it all the way
+
+We have input array A of length n and a range of sum targets to check for is [Tmin,Tmax]
+let m=Tmax−Tmin. Let's take some constant w>m (in my case, it was simply w=m+1,
+and store our values a∈A in a hash table h with keys a÷w (integer division). 
+Hash table values will be lists of corresponding as, as, definitely, there can be more than one with the same key. 
+NOTE: here I rely on the fact that these lists will be short, that is, at most some small constant number of elements.
+Now, for each a∈A we want to find b∈A such than Tmin≤a+b≤Tmax, or Tmin−a≤b≤Tmax−a.
+Let T=Tmin−a, then the condition will be T≤b≤T+m, which implies T÷w≤b÷w≤(T+m)÷w, and, as w>m, this in turn implies T÷w≤b÷w≤T÷w+1. 
+Bingo! We can just check lists h[(Tmin−a)÷w] and h[(Tmin−a)÷w+1] for interesting values of b. 
+Of course, we'll have to check them all, as our final condition is enough, but not necessary.
+P.S. After writing down all this, it turns out that we can even take w=m, but it really doesn't make much difference
